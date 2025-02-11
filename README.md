@@ -66,6 +66,8 @@ docker-compose up --build -d
 4️⃣ Now, open your browser and visit:
 ```
 Frontend (React): http://hostengland.co.uk
+```
+```
 Backend (API): http://hostengland.co.uk/api
 ```
 
