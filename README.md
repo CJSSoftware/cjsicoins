@@ -55,7 +55,7 @@ MONGO_URI=
 PAYPAL_CLIENT_ID=your-paypal-client-id
 PAYPAL_SECRET=your-paypal-secret
 FRONTEND_URL=http://hostengland.co.uk
-SESSION_SECRET=your-secret-key```
+SESSION_SECRET=your-secret-key
 ```
 3️⃣ Run with Docker
 Use docker-compose to build the project and start it
