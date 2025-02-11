@@ -68,3 +68,12 @@ Now, open your browser and visit:
 
 Frontend (React): http://hostengland.co.uk
 Backend (API): http://hostengland.co.uk/api
+
+🎮 Minecraft Integration
+Streamers can set custom gift commands to trigger in their Minecraft server.
+Default format:
+bash
+Copy
+Edit
+/bedrock {playername} 20 20
+Configurable in the admin panel.
