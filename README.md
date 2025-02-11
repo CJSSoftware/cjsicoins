@@ -49,10 +49,6 @@ cd cjsicoins
 
 2️⃣ Set Up Environment Variables
 Create a `.env` file in the backend folder and add:
-
-env
-Copy
-Edit
 ```
 PORT=5000
 MONGO_URI=
@@ -62,24 +58,25 @@ FRONTEND_URL=http://hostengland.co.uk
 SESSION_SECRET=your-secret-key```
 ```
 3️⃣ Run with Docker
-bash
-Copy
-Edit
+Use docker-compose to build the project and start it
 ```
 docker-compose up --build -d
 ```
-Now, open your browser and visit:
+
+4️⃣ Now, open your browser and visit:
 ```
 Frontend (React): http://hostengland.co.uk
 Backend (API): http://hostengland.co.uk/api
 ```
+
 🎮 Minecraft Integration
 Streamers can set custom gift commands to trigger in their Minecraft server.
-Default format:
-bash
-Copy
-Edit
+
+Default Command format:
 ```
 /bedrock {playername} 20 20
 ```
-Configurable in the admin panel.
+
+Minecraft Commands are only Configurable in the Streamers Admin Panel.
+
+The Website Owner has right to subject to change or edit any part of the website or this Website System (including removing and banning streamers who violate terms of conditions.)
