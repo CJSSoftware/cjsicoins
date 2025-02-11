@@ -1,6 +1,6 @@
 # CJSGaming iCoins 🎮💰
 
-A multi-streamer platform where TikTok viewers can purchase virtual gifts that trigger commands in Minecraft. Payments are processed via **PayPal**, and streamers receive payouts to their **PayPal accounts**.
+Is a **multi-streamer** platform that allows **TikTok** viewers to purchase virtual gifts, triggering in-game commands in Minecraft. Payments are securely processed via **PayPal**, and streamers receive payouts directly to their **PayPal** accounts.
 
 ---
 
