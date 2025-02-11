@@ -41,12 +41,14 @@ cjsicoins/
 ## 🛠 Installation & Setup
 
 ### **1️⃣ Clone the Repository**
-```bash
+bash
+```
 git clone https://github.com/your-username/cjsicoins.git
-cd cjsicoins```
+cd cjsicoins
+```
 
 2️⃣ Set Up Environment Variables
-Create a .env file in the backend folder and add:
+Create a `.env` file in the backend folder and add:
 
 env
 Copy
