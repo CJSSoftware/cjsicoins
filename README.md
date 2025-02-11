@@ -12,7 +12,7 @@ A multi-streamer platform where TikTok viewers can purchase virtual gifts that t
 - 🖥 **Custom Branding** – Streamers can personalize their pages.
 - 🔑 **Authentication** – Supports login via **Email/Password** and **Discord**.
 - 💳 **PayPal Integration** – Users top-up with a minimum of 100 coins.
-- 🚀 **Docker Support** – Easily deployable using `docker-compose`.
+#- 🚀 **Docker Support** – Easily deployable using `docker-compose`.
 
 ---
 
