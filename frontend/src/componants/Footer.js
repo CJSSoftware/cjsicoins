@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <p>© {new Date().getFullYear()} CJSGaming LTD. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} CJSGaming LTD. ®️ All rights reserved.</p>
                 <Link to="https://hostengland.co.uk/privacy-policy" className="footer-link">Privacy Policy</Link>
             </div>
         </footer>
