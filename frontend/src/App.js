@@ -6,6 +6,7 @@ import AdminPanel from './pages/AdminPanel';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import PrivateRoute from './components/PrivateRoute';
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="https://hostengland.co.uk/register" element={<Register />} />
             <Route path="https://hostengland.co.uk/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
             <Route path="https://hostengland.co.uk/admin" element={<PrivateRoute><AdminPanel /></PrivateRoute>} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
     );
 }
