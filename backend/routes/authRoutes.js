@@ -4,13 +4,13 @@ const { login, register } = require('../controllers/authController');
 
 const router = express.Router();
 
-router.post('https://hostengland.co.uk/login', login);
-router.post('https://hostengland.co.uk/register', register);
+router.post('https://localhost:3000/login', login);
+router.post('https://localhost:3000/register', register);
 
 router.get('https://hostengland.co.uk/discord', passport.authenticate('discord'));
 router.get('https://hostengland.co.uk/discord/callback', passport.authenticate('discord', {
-    successRedirect: 'https://hostengland.co.uk/dashboard',
-    failureRedirect: 'https://hostengland.co.uk/login'
+    successRedirect: 'https://localhost:3000/dashboard',
+    failureRedirect: 'https://localhost:3000/login'
 }));
 
 module.exports = router;
