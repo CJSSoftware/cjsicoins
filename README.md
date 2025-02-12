@@ -82,5 +82,5 @@ Default Command format:
 Minecraft Commands are only Configurable in the Streamers Admin Panel.
 
 ```
-This Software is subject to copyright and trademark ©️ 2025 CJSGaming iCoins
+This Software is subject to copyright and trademark. ©️ 2025  CJSGaming iCoins ®️
 ```
