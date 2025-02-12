@@ -54,7 +54,7 @@ PORT=5000
 MONGO_URI=
 PAYPAL_CLIENT_ID=your-paypal-client-id
 PAYPAL_SECRET=your-paypal-secret
-FRONTEND_URL=http://hostengland.co.uk
+FRONTEND_URL=https://hostengland.co.uk
 SESSION_SECRET=your-secret-key
 ```
 3️⃣ Run with Docker
