@@ -14,10 +14,10 @@ const Home = () => {
                 <p>Purchase coins and use them to trigger events in Minecraft!</p>
 
                 <div className="buttons">
-                    <Link href="https://hostengland.co.uk/login">
+                    <Link href="https://localhost:3000/login">
                         <button>Login</button>
                     </Link>
-                    <Link href="https://hostengland.co.uk/register">
+                    <Link href="https://localhost:3000/register">
                         <button>Register</button>
                     </Link>
                 </div>
