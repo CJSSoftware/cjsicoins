@@ -1,0 +1,68 @@
+.index-container {
+  background: url("/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #00aaff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.btn img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #0088cc;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+}
+
+footer a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
