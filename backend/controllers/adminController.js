@@ -1,82 +1,47 @@
+const express = require('express');
+const router = express.Router();
 const User = require('../models/User');
-const Transaction = require('../models/Transaction');
+const Transaction = require('../models/Transaction'); // Assuming you have a Transaction model
+const { authenticateAdmin } = require('../middleware/authMiddleware'); // Admin middleware for protecting routes
 
-// Get all users (Admin only)
-exports.getAllUsers = async (req, res) => {
-    try {
-        const users = await User.find();
-        res.json(users);
-    } catch (error) {
-        res.status(500).json({ message: 'Server error' });
-    }
-};
-
-// Get a single user by ID
-exports.getUserById = async (req, res) => {
-    try {
-        const user = await User.findById(req.params.id);
-        if (!user) return res.status(404).json({ message: 'User not found' });
-        res.json(user);
-    } catch (error) {
-        res.status(500).json({ message: 'Server error' });
-    }
-};
-
-// Edit a user's balance (Admin only)
-exports.updateUserBalance = async (req, res) => {
-    const { userId, amount } = req.body;
-
-    try {
-        const user = await User.findById(userId);
-        if (!user) return res.status(404).json({ message: 'User not found' });
-
-        user.coins += amount;
-        await user.save();
-
-        res.json({ message: 'Balance updated successfully', coins: user.coins });
-    } catch (error) {
-        res.status(500).json({ message: 'Server error' });
-    }
-};
+// Get all users
+router.get('/users', authenticateAdmin, async (req, res) => {
+  try {
+    const users = await User.find();
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 
 // Get all transactions
-exports.getAllTransactions = async (req, res) => {
-    try {
-        const transactions = await Transaction.find().populate('userId', 'email username');
-        res.json(transactions);
-    } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+router.get('/transactions', authenticateAdmin, async (req, res) => {
+  try {
+    const transactions = await Transaction.find();
+    res.status(200).json(transactions);
+  } catch (error) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// Adjust user balance
+router.put('/user/:id/balance', authenticateAdmin, async (req, res) => {
+  const { balance } = req.body;
+  const { id } = req.params;
+
+  try {
+    const user = await User.findById(id);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
     }
-};
 
-// Process refund (Admin only)
-exports.processRefund = async (req, res) => {
-    const { transactionId } = req.body;
+    user.balance = balance;
+    await user.save();
 
-    try {
-        const transaction = await Transaction.findById(transactionId);
-        if (!transaction) return res.status(404).json({ message: 'Transaction not found' });
+    res.status(200).json({ message: 'Balance updated successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 
-        const user = await User.findById(transaction.userId);
-        if (!user) return res.status(404).json({ message: 'User not found' });
-
-        user.coins += transaction.amount;
-        await user.save();
-
-        await Transaction.findByIdAndDelete(transactionId);
-
-        res.json({ message: 'Refund processed successfully' });
-    } catch (error) {
-        res.status(500).json({ message: 'Server error' });
-    }
-};
-
-// Delete a user (Admin only)
-exports.deleteUser = async (req, res) => {
-    try {
-        await User.findByIdAndDelete(req.params.id);
-        res.json({ message: 'User deleted successfully' });
-    } catch (error) {
-        res.status(500).json({ message: 'Server error' });
-    }
-};
+module.exports = router;
